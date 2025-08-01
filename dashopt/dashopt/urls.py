@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 测试跨域路由
     path('test_cors/', views.test_cors),
-    # user
+    # user注册
     path('v1/users', include('user.urls')),
+    # 用户登录
+    path('v1/tokens', include('dtoken.urls')),
 ]
